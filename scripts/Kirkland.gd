@@ -48,6 +48,13 @@ func _physics_process(delta):
 				$body.animation = 'right_left'
 				$body.flip_h = true
 				$head.frame = 3
+				
+	# Play walking audio
+	if velocity != Vector2(0, 0):
+		if !$KirkWalkAudio.playing:
+			$KirkWalkAudio.play()
+	else:
+		$KirkWalkAudio.stop()
 	
 	move_and_slide(WALK_SPEED * velocity, Vector2(0, 0))
 
