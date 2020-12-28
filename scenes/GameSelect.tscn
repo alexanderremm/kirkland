@@ -59,7 +59,7 @@ animations = [ {
 } ]
 
 [sub_resource type="RectangleShape2D" id=10]
-extents = Vector2( 32, 36 )
+extents = Vector2( 32, 24 )
 
 [sub_resource type="RectangleShape2D" id=11]
 extents = Vector2( 10, 300 )
@@ -78,7 +78,7 @@ animation = "open"
 script = ExtResource( 3 )
 
 [node name="InteractZone" type="Area2D" parent="GooseDoor"]
-position = Vector2( 0, 24 )
+position = Vector2( 0, 5 )
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="GooseDoor/InteractZone"]
 shape = SubResource( 10 )
@@ -95,7 +95,7 @@ __meta__ = {
 }
 
 [node name="Kirkland" parent="." instance=ExtResource( 1 )]
-position = Vector2( 504.029, 303.928 )
+position = Vector2( 504.029, 305.61 )
 
 [node name="Left Wall" type="StaticBody2D" parent="."]
 

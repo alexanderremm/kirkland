@@ -16,8 +16,9 @@ func _process(delta):
 
 
 func _on_InteractZone_body_entered(body):
-	$Confirmation.visible = true
-	canPlay = true
+	if body.name == "Kirkland":
+		$Confirmation.visible = true
+		canPlay = true
 		
 
 func _on_InteractZone_body_exited(body):
