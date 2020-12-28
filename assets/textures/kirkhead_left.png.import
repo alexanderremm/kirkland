@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/kirkwalk.png-297579c48c652325c0086f22e67477c1.stex"
+path="res://.import/kirkhead_left.png-dfcc370d8f393529feb939a0d3a44b79.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/kirkwalk.png"
-dest_files=[ "res://.import/kirkwalk.png-297579c48c652325c0086f22e67477c1.stex" ]
+source_file="res://assets/textures/kirkhead_left.png"
+dest_files=[ "res://.import/kirkhead_left.png-dfcc370d8f393529feb939a0d3a44b79.stex" ]
 
 [params]
 

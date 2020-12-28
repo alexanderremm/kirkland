@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/kirkhead_back.png-609277fefbab96d90b07955fbdff66de.stex"
+path="res://.import/wood_floor.png-17b10af95b972bfb9ac75208d3a5210a.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/kirkhead_back.png"
-dest_files=[ "res://.import/kirkhead_back.png-609277fefbab96d90b07955fbdff66de.stex" ]
+source_file="res://assets/textures/wood_floor.png"
+dest_files=[ "res://.import/wood_floor.png-17b10af95b972bfb9ac75208d3a5210a.stex" ]
 
 [params]
 

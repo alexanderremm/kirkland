@@ -1,11 +1,11 @@
 [gd_scene load_steps=30 format=2]
 
-[ext_resource path="res://assets/kirkhead.png" type="Texture" id=1]
-[ext_resource path="res://assets/kirkwalk.png" type="Texture" id=2]
+[ext_resource path="res://assets/textures/kirkhead.png" type="Texture" id=1]
+[ext_resource path="res://assets/textures/kirkwalk.png" type="Texture" id=2]
 [ext_resource path="res://scripts/Kirkland.gd" type="Script" id=3]
-[ext_resource path="res://assets/kirkhead_back.png" type="Texture" id=4]
-[ext_resource path="res://assets/kirkhead_left.png" type="Texture" id=5]
-[ext_resource path="res://assets/kirkhead_right.png" type="Texture" id=6]
+[ext_resource path="res://assets/textures/kirkhead_back.png" type="Texture" id=4]
+[ext_resource path="res://assets/textures/kirkhead_left.png" type="Texture" id=5]
+[ext_resource path="res://assets/textures/kirkhead_right.png" type="Texture" id=6]
 
 [sub_resource type="SpriteFrames" id=1]
 animations = [ {
@@ -14,10 +14,6 @@ animations = [ {
 "name": "default",
 "speed": 5.0
 } ]
-
-[sub_resource type="CapsuleShape2D" id=2]
-radius = 25.8573
-height = 16.2531
 
 [sub_resource type="AtlasTexture" id=3]
 flags = 4
@@ -132,6 +128,10 @@ animations = [ {
 "speed": 10.0
 } ]
 
+[sub_resource type="CapsuleShape2D" id=2]
+radius = 25.8573
+height = 16.2531
+
 [node name="Kirkland" type="KinematicBody2D"]
 script = ExtResource( 3 )
 
@@ -139,13 +139,13 @@ script = ExtResource( 3 )
 scale = Vector2( 0.177852, 0.177852 )
 frames = SubResource( 1 )
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
-position = Vector2( 0.943863, 9.31357 )
-shape = SubResource( 2 )
-
 [node name="body" type="AnimatedSprite" parent="."]
 position = Vector2( 0.321772, 21.7408 )
 scale = Vector2( 2.5338, 2.5338 )
 z_index = -1
 frames = SubResource( 23 )
 animation = "front_back"
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2( 0.943863, 9.31357 )
+shape = SubResource( 2 )

@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/kirkhead_right.png-bf91b4394f4b144f8c07f4bcf7abef04.stex"
+path="res://.import/dungeon_door.png-33203cb081fda906ccfacd5baf94dc41.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/kirkhead_right.png"
-dest_files=[ "res://.import/kirkhead_right.png-bf91b4394f4b144f8c07f4bcf7abef04.stex" ]
+source_file="res://assets/textures/dungeon_door.png"
+dest_files=[ "res://.import/dungeon_door.png-33203cb081fda906ccfacd5baf94dc41.stex" ]
 
 [params]
 

@@ -16,7 +16,7 @@ _global_script_class_icons={
 [application]
 
 config/name="The Binding of Kirkland"
-run/main_scene="res://scenes/Root.tscn"
+run/main_scene="res://scenes/GameSelect.tscn"
 config/icon="res://icon.png"
 
 [display]
