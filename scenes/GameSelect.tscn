@@ -1,9 +1,10 @@
-[gd_scene load_steps=17 format=2]
+[gd_scene load_steps=18 format=2]
 
 [ext_resource path="res://scenes/Kirkland.tscn" type="PackedScene" id=1]
 [ext_resource path="res://assets/textures/dungeon_door.png" type="Texture" id=2]
 [ext_resource path="res://scripts/GooseDoor.gd" type="Script" id=3]
 [ext_resource path="res://assets/fonts/EDBWT.tres" type="DynamicFont" id=4]
+[ext_resource path="res://assets/textures/dungeon.png" type="Texture" id=5]
 
 [sub_resource type="AtlasTexture" id=1]
 flags = 4
@@ -84,6 +85,7 @@ position = Vector2( 0, 5 )
 shape = SubResource( 10 )
 
 [node name="Confirmation" type="RichTextLabel" parent="GooseDoor"]
+visible = false
 margin_left = -180.0
 margin_top = 150.0
 margin_right = 332.0
@@ -120,6 +122,11 @@ shape = SubResource( 12 )
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Bottom Wall"]
 position = Vector2( 512, 610 )
 shape = SubResource( 12 )
+
+[node name="Background" type="Sprite" parent="."]
+position = Vector2( 512, 312 )
+z_index = -10
+texture = ExtResource( 5 )
 [connection signal="animation_finished" from="GooseDoor" to="GooseDoor" method="_on_GooseDoor_animation_finished"]
 [connection signal="body_entered" from="GooseDoor/InteractZone" to="GooseDoor" method="_on_InteractZone_body_entered"]
 [connection signal="body_exited" from="GooseDoor/InteractZone" to="GooseDoor" method="_on_InteractZone_body_exited"]
