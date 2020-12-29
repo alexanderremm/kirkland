@@ -1,10 +1,11 @@
-[gd_scene load_steps=19 format=2]
+[gd_scene load_steps=20 format=2]
 
 [ext_resource path="res://scenes/Kirkland.tscn" type="PackedScene" id=1]
 [ext_resource path="res://assets/textures/dungeon_door.png" type="Texture" id=2]
 [ext_resource path="res://scripts/GooseDoor.gd" type="Script" id=3]
 [ext_resource path="res://assets/fonts/EDBWT.tres" type="DynamicFont" id=4]
 [ext_resource path="res://assets/textures/dungeon.png" type="Texture" id=5]
+[ext_resource path="res://assets/textures/prompt_bg.png" type="Texture" id=6]
 
 [sub_resource type="AtlasTexture" id=1]
 flags = 4
@@ -127,6 +128,10 @@ position = Vector2( 0, 5 )
 [node name="CollisionShape2D" type="CollisionShape2D" parent="GooseDoor/InteractZone"]
 shape = SubResource( 10 )
 
+[node name="ConfirmationBg" type="Sprite" parent="GooseDoor"]
+position = Vector2( 0, 183 )
+texture = ExtResource( 6 )
+
 [node name="Confirmation" type="RichTextLabel" parent="GooseDoor"]
 visible = false
 margin_left = -180.0
@@ -134,6 +139,7 @@ margin_top = 150.0
 margin_right = 332.0
 margin_bottom = 225.0
 custom_fonts/normal_font = ExtResource( 4 )
+custom_colors/default_color = Color( 0, 0, 0, 1 )
 text = "Press Spacebar to open the door"
 __meta__ = {
 "_edit_use_anchors_": false
@@ -175,7 +181,6 @@ texture = ExtResource( 5 )
 anims/FadeToBlack = SubResource( 13 )
 
 [node name="CanvasModulate" type="CanvasModulate" parent="Fader"]
-color = Color( 0, 0, 0, 1 )
 [connection signal="animation_finished" from="GooseDoor" to="GooseDoor" method="_on_GooseDoor_animation_finished"]
 [connection signal="body_entered" from="GooseDoor/InteractZone" to="GooseDoor" method="_on_InteractZone_body_entered"]
 [connection signal="body_exited" from="GooseDoor/InteractZone" to="GooseDoor" method="_on_InteractZone_body_exited"]

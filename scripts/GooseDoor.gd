@@ -15,6 +15,7 @@ var kirk = null
 # Called when the node enters the scene tree for the first time.
 func _ready():
 	$Confirmation.visible = false
+	$ConfirmationBg.visible = false
 	kirk = get_parent().get_node("Kirkland")
 	get_parent().get_node("Fader").get_node("CanvasModulate").color = Color(1, 1, 1)
 
@@ -40,11 +41,13 @@ func _process(delta):
 func _on_InteractZone_body_entered(body):
 	if body.name == "Kirkland":
 		$Confirmation.visible = true
+		$ConfirmationBg.visible = true
 		canPlay = true
 		
 
 func _on_InteractZone_body_exited(body):
 	$Confirmation.visible = false
+	$ConfirmationBg.visible = false
 	canPlay = false
 
 
