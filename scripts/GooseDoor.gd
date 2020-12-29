@@ -62,4 +62,4 @@ func _on_GooseDoor_animation_finished():
 
 func _on_FadeToBlack_animation_finished(anim_name):
 	get_parent().get_node("Fader").stop()
-	get_tree().change_scene('res://scenes/KirkGoose.tscn')
+	get_tree().change_scene('res://scenes/RoofKirkGoose.tscn')
